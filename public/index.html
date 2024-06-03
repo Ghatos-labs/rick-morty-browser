@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+        <img src="brandify_logo.svg">
+    </div>
+    <form id="form" onsubmit="">
+        <input id="search-bar" name="searchBar" type="text" placeholder="Search...">
+        <div>
+            <select name="status" id="status-dropdown">
+                <option value="all" selected>All</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <input type="submit" value="🔎" class="search-button">            
+        </div>
+
+    </form>
+
+    <script type="text/javascript" src="/script.js"></script>
+    <div id="character-card-container"></div>
+    <div id="character-container"></div>
+    <div id="page-buttons"></div>
+</body>
+</html>

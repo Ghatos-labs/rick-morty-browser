@@ -1,0 +1,112 @@
+:root {
+    --global-border-radius: 10px;
+    --global-outline-color: grey;
+    --side-spacing: 10%;
+    --elements-spacing: 25px;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.character-button, .back-button {
+    border: none;
+    background-color: #eeeeee;
+    padding: 4px;
+    border-radius: calc(var(--global-border-radius) * 0.5);
+    border: solid 2px var(--global-outline-color);
+    cursor: pointer;
+}
+
+.character-button:hover, .back-button:hover {
+    background-color: #dddddd;
+    transform: scale(1.05)
+}
+
+.character-button:active, .back-button:active {
+    background-color: #cccccc;
+    transform: scale(1)
+}
+
+.back-button {
+    margin-left: var(--side-spacing);
+}
+
+#navbar {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-bottom: solid 2px var(--global-outline-color);
+}
+#navbar img:hover {
+    cursor: pointer;
+}
+#navbar img {
+    height: 40px;
+}
+#form {
+    display: flex;
+    margin-left: var(--side-spacing);
+    margin-top: var(--elements-spacing);
+    margin-bottom: var(--elements-spacing);
+    width: fit-content;
+    flex-wrap: wrap;
+    gap: var(--elements-spacing);
+}
+#form * {
+    width: fit-content;
+}
+#character-card-container {
+    padding-left: var(--side-spacing);
+    padding-right: var(--side-spacing);
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+.character-card {
+    border: solid 2px var(--global-outline-color);
+    height: fit-content;
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--global-border-radius);
+}
+.character-img {
+    width: 75%;
+    border-radius: var(--global-border-radius);
+    border: solid 2px var(--global-outline-color);
+    object-fit: cover;
+}
+#page-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--elements-spacing);
+    margin-bottom: var(--elements-spacing);
+    gap: calc(var(--elements-spacing) * 0.5);
+}
+.character-information-container {
+    margin-left: var(--side-spacing);
+    margin-right: var(--side-spacing);
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--global-border-radius);
+    border: solid 2px var(--global-outline-color);
+    padding: var(--elements-spacing);
+}
+.character-information-container img {
+    border-radius: var(--global-border-radius);
+    border: solid 2px var(--global-outline-color);
+}
+
+@media (max-width: 1200px)
+{
+    #character-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 750px)
+{
+    #character-card-container {
+        grid-template-columns: 1fr;
+    }
+}
